@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		234B2A1160DDC6A48E13AC1F /* Pods_SicrediChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED08C676254669104FE8319D /* Pods_SicrediChallengeTests.framework */; };
+		6D30DA5B253F575D002C65B1 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30DA5A253F575D002C65B1 /* DefaultButton.swift */; };
+		6D30DA95253F5C03002C65B1 /* ColorSystem.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D30DA94253F5C03002C65B1 /* ColorSystem.xcassets */; };
+		6D30DA9A253F5C69002C65B1 /* ColorSytem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30DA99253F5C69002C65B1 /* ColorSytem.swift */; };
+		6D30DA9F253F60F0002C65B1 /* FloatLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30DA9E253F60F0002C65B1 /* FloatLabel.swift */; };
+		6D30DAA4253F614A002C65B1 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30DAA3253F614A002C65B1 /* PaddingLabel.swift */; };
 		6D3A8071253B658E00751092 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A8070253B658E00751092 /* EventViewModel.swift */; };
 		6D3A8079253B6E1300751092 /* APIEnviorment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3A8078253B6E1300751092 /* APIEnviorment.swift */; };
-		6D5A2AB2253D3AF6001D6CB6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A2AB1253D3AF6001D6CB6 /* AppCoordinator.swift */; };
 		6D5A2AB7253D3DEC001D6CB6 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A2AB6253D3DEC001D6CB6 /* EventService.swift */; };
 		6D5A2ABF253D48ED001D6CB6 /* EventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5A2ABE253D48ED001D6CB6 /* EventListViewModel.swift */; };
 		6D6D18CB253B6055006607FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D18CA253B6055006607FC /* AppDelegate.swift */; };
@@ -23,6 +27,17 @@
 		6D6D18ED253B6058006607FC /* SicrediChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D18EC253B6058006607FC /* SicrediChallengeUITests.swift */; };
 		6D6D18FF253B6125006607FC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D18FE253B6125006607FC /* Event.swift */; };
 		6D6D1904253B6145006607FC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D1903253B6145006607FC /* Person.swift */; };
+		6DAAE2D2253E4607000AE92C /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAE2D1253E4607000AE92C /* EventDetailsViewController.swift */; };
+		6DAAE2DA253E4666000AE92C /* EventDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DAAE2D9253E4666000AE92C /* EventDetails.storyboard */; };
+		6DB302DD253DE1E50049D704 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB302DC253DE1E50049D704 /* Storyboarded.swift */; };
+		6DB302E2253DE20C0049D704 /* Coorinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB302E1253DE20C0049D704 /* Coorinator.swift */; };
+		6DB302E7253DE24E0049D704 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB302E6253DE24E0049D704 /* MainCoordinator.swift */; };
+		6DB302EE253DE2CF0049D704 /* EventCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB302ED253DE2CF0049D704 /* EventCoordinator.swift */; };
+		6DE40C6D25405BC9009E942C /* EventListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE40C6B25405BC9009E942C /* EventListTableViewCell.swift */; };
+		6DE40C6E25405BC9009E942C /* EventListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DE40C6C25405BC9009E942C /* EventListTableViewCell.xib */; };
+		6DE6EB1D253F7B2E00C92E71 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE6EB1C253F7B2E00C92E71 /* EventDetailsViewModel.swift */; };
+		6DE6EB22253F7EE400C92E71 /* HttpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE6EB21253F7EE400C92E71 /* HttpFactory.swift */; };
+		6DE6EB27253F968200C92E71 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE6EB26253F968200C92E71 /* AlertHelper.swift */; };
 		9538CDA7AF0B14FD46F266F8 /* Pods_SicrediChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEF68EDEDA17842627E50BDE /* Pods_SicrediChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,9 +61,13 @@
 /* Begin PBXFileReference section */
 		32280C41BD37132BD8891D5B /* Pods-SicrediChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SicrediChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-SicrediChallengeTests/Pods-SicrediChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		668C79559EECB07CFACDEB95 /* Pods-SicrediChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SicrediChallenge.release.xcconfig"; path = "Target Support Files/Pods-SicrediChallenge/Pods-SicrediChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		6D30DA5A253F575D002C65B1 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		6D30DA94253F5C03002C65B1 /* ColorSystem.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorSystem.xcassets; sourceTree = "<group>"; };
+		6D30DA99253F5C69002C65B1 /* ColorSytem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSytem.swift; sourceTree = "<group>"; };
+		6D30DA9E253F60F0002C65B1 /* FloatLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatLabel.swift; sourceTree = "<group>"; };
+		6D30DAA3253F614A002C65B1 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		6D3A8070253B658E00751092 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		6D3A8078253B6E1300751092 /* APIEnviorment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnviorment.swift; sourceTree = "<group>"; };
-		6D5A2AB1253D3AF6001D6CB6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6D5A2AB6253D3DEC001D6CB6 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		6D5A2ABE253D48ED001D6CB6 /* EventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewModel.swift; sourceTree = "<group>"; };
 		6D6D18C7253B6055006607FC /* SicrediChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SicrediChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +86,17 @@
 		6D6D18EE253B6058006607FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6D18FE253B6125006607FC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		6D6D1903253B6145006607FC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6DAAE2D1253E4607000AE92C /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		6DAAE2D9253E4666000AE92C /* EventDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetails.storyboard; sourceTree = "<group>"; };
+		6DB302DC253DE1E50049D704 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		6DB302E1253DE20C0049D704 /* Coorinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coorinator.swift; sourceTree = "<group>"; };
+		6DB302E6253DE24E0049D704 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6DB302ED253DE2CF0049D704 /* EventCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCoordinator.swift; sourceTree = "<group>"; };
+		6DE40C6B25405BC9009E942C /* EventListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableViewCell.swift; sourceTree = "<group>"; };
+		6DE40C6C25405BC9009E942C /* EventListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListTableViewCell.xib; sourceTree = "<group>"; };
+		6DE6EB1C253F7B2E00C92E71 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		6DE6EB21253F7EE400C92E71 /* HttpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpFactory.swift; sourceTree = "<group>"; };
+		6DE6EB26253F968200C92E71 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		78A684A4506A8BF8F0FA0F02 /* Pods-SicrediChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SicrediChallenge.debug.xcconfig"; path = "Target Support Files/Pods-SicrediChallenge/Pods-SicrediChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		8CC024CEE748FF183FCE6BEF /* Pods-SicrediChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SicrediChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-SicrediChallengeTests/Pods-SicrediChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		AEF68EDEDA17842627E50BDE /* Pods_SicrediChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SicrediChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,11 +139,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6D30DA59253F5747002C65B1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6D30DA5A253F575D002C65B1 /* DefaultButton.swift */,
+				6D30DA9E253F60F0002C65B1 /* FloatLabel.swift */,
+				6D30DAA3253F614A002C65B1 /* PaddingLabel.swift */,
+				6DE40C6B25405BC9009E942C /* EventListTableViewCell.swift */,
+				6DE40C6C25405BC9009E942C /* EventListTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		6D3A8061253B628E00751092 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				6D3A8078253B6E1300751092 /* APIEnviorment.swift */,
 				6D5A2AB6253D3DEC001D6CB6 /* EventService.swift */,
+				6DE6EB21253F7EE400C92E71 /* HttpFactory.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -123,6 +166,7 @@
 			children = (
 				6D3A8070253B658E00751092 /* EventViewModel.swift */,
 				6D5A2ABE253D48ED001D6CB6 /* EventListViewModel.swift */,
+				6DE6EB1C253F7B2E00C92E71 /* EventDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -130,7 +174,10 @@
 		6D5A2AB0253D3AE3001D6CB6 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				6D5A2AB1253D3AF6001D6CB6 /* AppCoordinator.swift */,
+				6DB302EC253DE2BC0049D704 /* AppCordinators */,
+				6DB302DC253DE1E50049D704 /* Storyboarded.swift */,
+				6DB302E1253DE20C0049D704 /* Coorinator.swift */,
+				6DB302E6253DE24E0049D704 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -160,17 +207,21 @@
 		6D6D18C9253B6055006607FC /* SicrediChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				6D30DA59253F5747002C65B1 /* Components */,
+				6DAAE2D0253E45D5000AE92C /* ViewController */,
+				6DAAE2CF253E45B6000AE92C /* View */,
 				6D5A2AB0253D3AE3001D6CB6 /* Coordinator */,
 				6D3A806F253B657F00751092 /* ViewModel */,
 				6D3A8061253B628E00751092 /* Network */,
 				6D6D18FD253B60FA006607FC /* Model */,
 				6D6D18CA253B6055006607FC /* AppDelegate.swift */,
 				6D6D18CC253B6055006607FC /* SceneDelegate.swift */,
-				6D6D18CE253B6055006607FC /* ViewController.swift */,
-				6D6D18D0253B6055006607FC /* Main.storyboard */,
 				6D6D18D3253B6057006607FC /* Assets.xcassets */,
+				6D30DA94253F5C03002C65B1 /* ColorSystem.xcassets */,
 				6D6D18D5253B6057006607FC /* LaunchScreen.storyboard */,
 				6D6D18D8253B6057006607FC /* Info.plist */,
+				6D30DA99253F5C69002C65B1 /* ColorSytem.swift */,
+				6DE6EB26253F968200C92E71 /* AlertHelper.swift */,
 			);
 			path = SicrediChallenge;
 			sourceTree = "<group>";
@@ -200,6 +251,32 @@
 				6D6D1903253B6145006607FC /* Person.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6DAAE2CF253E45B6000AE92C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D6D18D0253B6055006607FC /* Main.storyboard */,
+				6DAAE2D9253E4666000AE92C /* EventDetails.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6DAAE2D0253E45D5000AE92C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D6D18CE253B6055006607FC /* ViewController.swift */,
+				6DAAE2D1253E4607000AE92C /* EventDetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6DB302EC253DE2BC0049D704 /* AppCordinators */ = {
+			isa = PBXGroup;
+			children = (
+				6DB302ED253DE2CF0049D704 /* EventCoordinator.swift */,
+			);
+			path = AppCordinators;
 			sourceTree = "<group>";
 		};
 		DDA6584C43DC22176C48DA3C /* Pods */ = {
@@ -320,8 +397,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DE40C6E25405BC9009E942C /* EventListTableViewCell.xib in Resources */,
 				6D6D18D7253B6057006607FC /* LaunchScreen.storyboard in Resources */,
 				6D6D18D4253B6057006607FC /* Assets.xcassets in Resources */,
+				6DAAE2DA253E4666000AE92C /* EventDetails.storyboard in Resources */,
+				6D30DA95253F5C03002C65B1 /* ColorSystem.xcassets in Resources */,
 				6D6D18D2253B6055006607FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,15 +509,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6D1904253B6145006607FC /* Person.swift in Sources */,
+				6DE6EB1D253F7B2E00C92E71 /* EventDetailsViewModel.swift in Sources */,
 				6D6D18FF253B6125006607FC /* Event.swift in Sources */,
-				6D5A2AB2253D3AF6001D6CB6 /* AppCoordinator.swift in Sources */,
 				6D6D18CF253B6055006607FC /* ViewController.swift in Sources */,
 				6D3A8079253B6E1300751092 /* APIEnviorment.swift in Sources */,
+				6DB302EE253DE2CF0049D704 /* EventCoordinator.swift in Sources */,
 				6D5A2AB7253D3DEC001D6CB6 /* EventService.swift in Sources */,
+				6D30DAA4253F614A002C65B1 /* PaddingLabel.swift in Sources */,
 				6D3A8071253B658E00751092 /* EventViewModel.swift in Sources */,
+				6DB302DD253DE1E50049D704 /* Storyboarded.swift in Sources */,
+				6D30DA9F253F60F0002C65B1 /* FloatLabel.swift in Sources */,
+				6DAAE2D2253E4607000AE92C /* EventDetailsViewController.swift in Sources */,
+				6DE6EB22253F7EE400C92E71 /* HttpFactory.swift in Sources */,
 				6D6D18CB253B6055006607FC /* AppDelegate.swift in Sources */,
+				6D30DA5B253F575D002C65B1 /* DefaultButton.swift in Sources */,
 				6D6D18CD253B6055006607FC /* SceneDelegate.swift in Sources */,
+				6D30DA9A253F5C69002C65B1 /* ColorSytem.swift in Sources */,
+				6DB302E7253DE24E0049D704 /* MainCoordinator.swift in Sources */,
+				6DE6EB27253F968200C92E71 /* AlertHelper.swift in Sources */,
 				6D5A2ABF253D48ED001D6CB6 /* EventListViewModel.swift in Sources */,
+				6DE40C6D25405BC9009E942C /* EventListTableViewCell.swift in Sources */,
+				6DB302E2253DE20C0049D704 /* Coorinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +709,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V43H9KVKKZ;
 				INFOPLIST_FILE = SicrediChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,7 +717,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.luizfe.SicrediChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -637,6 +730,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V43H9KVKKZ;
 				INFOPLIST_FILE = SicrediChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,7 +738,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.developer.luizfe.SicrediChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
