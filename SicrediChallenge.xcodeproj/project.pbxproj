@@ -142,11 +142,10 @@
 		6D30DA59253F5747002C65B1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6D58148425408FCF00C2F42C /* EventListCell */,
 				6D30DA5A253F575D002C65B1 /* DefaultButton.swift */,
 				6D30DA9E253F60F0002C65B1 /* FloatLabel.swift */,
 				6D30DAA3253F614A002C65B1 /* PaddingLabel.swift */,
-				6DE40C6B25405BC9009E942C /* EventListTableViewCell.swift */,
-				6DE40C6C25405BC9009E942C /* EventListTableViewCell.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -169,6 +168,15 @@
 				6DE6EB1C253F7B2E00C92E71 /* EventDetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6D58148425408FCF00C2F42C /* EventListCell */ = {
+			isa = PBXGroup;
+			children = (
+				6DE40C6B25405BC9009E942C /* EventListTableViewCell.swift */,
+				6DE40C6C25405BC9009E942C /* EventListTableViewCell.xib */,
+			);
+			path = EventListCell;
 			sourceTree = "<group>";
 		};
 		6D5A2AB0253D3AE3001D6CB6 /* Coordinator */ = {

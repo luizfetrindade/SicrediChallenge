@@ -40,20 +40,22 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.eventTitle.text = eventViewModel?.title
-        let placeholderImage = UIImage(named: "defaultImg")
+        
     
     
         let milisecond = eventViewModel.date!
         let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(milisecond)/1000)
-        var dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
         let datefinal  = dateFormatter.string(from: dateVar)
         date.text = datefinal
+        
+        let placeholderImage = UIImage(named: "defaultImg")
         self.eventImage.kf.setImage(with: eventViewModel.image,
                                     placeholder: placeholderImage,
                                     options: [.transition(.fade(1))],
                                     progressBlock: { receivedSize, totalSize in },
-                                    completionHandler: { image, error, cacheType, imageURL in})
+                                    completionHandler: {result in})
         
         self.eventDescription.text = eventViewModel.description
         self.decriptionHeightHelper =  self.descriptionHeight
