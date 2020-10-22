@@ -27,20 +27,9 @@ final class EventListViewModel {
         
         return requestObservable.fetchEvents(request: request).map  {
             $0.map{
-                EventViewModel(event: $0)
+                let guests = GuestListViewModel.init(person: $0.people!)
+                return EventViewModel(event: $0, guest: guests)
             }
-        }
-    }
-    
-    func fetchEventDetails(_ id: String) throws -> Observable<EventViewModel> {
-        let urlFinal = APIEnvironment.shared.getUrl(for: .eventDetails, event: id)
-        
-        var request = URLRequest(url: URL(string: urlFinal)!)
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        return requestObservable.requestFromAPI(request: request).map  {
-            EventViewModel(event: $0)
         }
     }
 }

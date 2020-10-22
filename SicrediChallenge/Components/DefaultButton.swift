@@ -27,13 +27,3 @@ class DefaultButton: UIButton {
     }
 }
 
-extension UIView {
-    func setRadiusWithShadow(_ radius: CGFloat? = nil, shadow: CGFloat? = nil, shadowOp: Float? = nil) {
-        layer.cornerRadius = radius ?? 4
-        layer.shadowColor = UIColor.darkGray.cgColor
-        layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
-        layer.shadowRadius = shadow ?? 1.0
-        layer.shadowOpacity = shadowOp ?? 0.7
-        layer.masksToBounds = false
-    }
-}

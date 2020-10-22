@@ -27,6 +27,8 @@
 		6D6D18ED253B6058006607FC /* SicrediChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D18EC253B6058006607FC /* SicrediChallengeUITests.swift */; };
 		6D6D18FF253B6125006607FC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D18FE253B6125006607FC /* Event.swift */; };
 		6D6D1904253B6145006607FC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6D1903253B6145006607FC /* Person.swift */; };
+		6D72EC652541FFFD00A4F6EA /* GuestListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D72EC642541FFFD00A4F6EA /* GuestListViewModel.swift */; };
+		6D72EC812542253B00A4F6EA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D72EC802542253B00A4F6EA /* Extensions.swift */; };
 		6DAAE2D2253E4607000AE92C /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAAE2D1253E4607000AE92C /* EventDetailsViewController.swift */; };
 		6DAAE2DA253E4666000AE92C /* EventDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DAAE2D9253E4666000AE92C /* EventDetails.storyboard */; };
 		6DB302DD253DE1E50049D704 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB302DC253DE1E50049D704 /* Storyboarded.swift */; };
@@ -86,6 +88,8 @@
 		6D6D18EE253B6058006607FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D6D18FE253B6125006607FC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		6D6D1903253B6145006607FC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6D72EC642541FFFD00A4F6EA /* GuestListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestListViewModel.swift; sourceTree = "<group>"; };
+		6D72EC802542253B00A4F6EA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6DAAE2D1253E4607000AE92C /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		6DAAE2D9253E4666000AE92C /* EventDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetails.storyboard; sourceTree = "<group>"; };
 		6DB302DC253DE1E50049D704 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				6D3A8070253B658E00751092 /* EventViewModel.swift */,
 				6D5A2ABE253D48ED001D6CB6 /* EventListViewModel.swift */,
 				6DE6EB1C253F7B2E00C92E71 /* EventDetailsViewModel.swift */,
+				6D72EC642541FFFD00A4F6EA /* GuestListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 		6D6D18C9253B6055006607FC /* SicrediChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				6D72EC7F2542252800A4F6EA /* Helpers */,
 				6D30DA59253F5747002C65B1 /* Components */,
 				6DAAE2D0253E45D5000AE92C /* ViewController */,
 				6DAAE2CF253E45B6000AE92C /* View */,
@@ -259,6 +265,14 @@
 				6D6D1903253B6145006607FC /* Person.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6D72EC7F2542252800A4F6EA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6D72EC802542253B00A4F6EA /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		6DAAE2CF253E45B6000AE92C /* View */ = {
@@ -524,6 +538,7 @@
 				6DB302EE253DE2CF0049D704 /* EventCoordinator.swift in Sources */,
 				6D5A2AB7253D3DEC001D6CB6 /* EventService.swift in Sources */,
 				6D30DAA4253F614A002C65B1 /* PaddingLabel.swift in Sources */,
+				6D72EC652541FFFD00A4F6EA /* GuestListViewModel.swift in Sources */,
 				6D3A8071253B658E00751092 /* EventViewModel.swift in Sources */,
 				6DB302DD253DE1E50049D704 /* Storyboarded.swift in Sources */,
 				6D30DA9F253F60F0002C65B1 /* FloatLabel.swift in Sources */,
@@ -534,6 +549,7 @@
 				6D6D18CD253B6055006607FC /* SceneDelegate.swift in Sources */,
 				6D30DA9A253F5C69002C65B1 /* ColorSytem.swift in Sources */,
 				6DB302E7253DE24E0049D704 /* MainCoordinator.swift in Sources */,
+				6D72EC812542253B00A4F6EA /* Extensions.swift in Sources */,
 				6DE6EB27253F968200C92E71 /* AlertHelper.swift in Sources */,
 				6D5A2ABF253D48ED001D6CB6 /* EventListViewModel.swift in Sources */,
 				6DE40C6D25405BC9009E942C /* EventListTableViewCell.swift in Sources */,

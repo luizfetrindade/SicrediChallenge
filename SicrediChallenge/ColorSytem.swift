@@ -13,6 +13,10 @@ class ColorSystem {
         return UIColor.init(named: "buttonColor") ?? .gray
     }
     
+    static var backgroundColor: UIColor{
+        return UIColor.init(named: "defaultBackgroundColor") ?? .gray
+    }
+    
     func getColor(name: String) -> UIColor{
         return UIColor.init(named: name) ?? .gray
     }

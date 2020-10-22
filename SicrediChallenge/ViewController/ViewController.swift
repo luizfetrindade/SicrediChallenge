@@ -21,9 +21,25 @@ class ViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nib = UINib(nibName: EventListTableViewCell.name, bundle: nil)
+        eventTableView.register(nib, forCellReuseIdentifier: EventListTableViewCell.name)
+        
         do{
-            try viewModel.fetchEvents().observeOn(MainScheduler.instance).bind(to: eventTableView.rx.items(cellIdentifier: "cell")) { index, viewModel, cell in
-                cell.textLabel?.text = viewModel.title
+            try viewModel.fetchEvents().observeOn(MainScheduler.instance).bind(to: eventTableView.rx.items(cellIdentifier: EventListTableViewCell.name)) { index, viewModel, cell in
+                let viewCell = cell as! EventListTableViewCell
+                viewCell.setEventImage(viewModel.image!)
+                viewCell.setTitle(viewModel.title)
+                viewCell.setDate(viewModel.date!)
+                viewCell.setDescription(viewModel.description)
+                
+                if viewModel.guest.guestCount > 0 {
+                    for index in 1...3 {
+                        let urlString = viewModel.guest.getPicAt(index)
+                        viewCell.setGuestImage(urlString!, guest: index)
+                    }
+                }
+                viewCell.setGuestCounter(viewModel.guest.guestCount)
+                
             }.disposed(by: disposebag)
             
             eventTableView.rx
@@ -34,21 +50,6 @@ class ViewController: UIViewController, Storyboarded {
         }
         catch let error {
             print("Error: ", error)
-        }
-        
-        do{
-            try viewModel.fetchEventDetails("1").subscribe(
-                onNext: { result in
-                    print(result)
-                },
-                onError: { error in
-                    print(error.localizedDescription)
-                },
-                onCompleted: {
-                    print("Completed event.")
-                }).disposed(by: disposebag)
-        }
-        catch {
         }
     }
 }

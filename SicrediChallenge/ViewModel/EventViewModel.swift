@@ -13,6 +13,7 @@ import RxCocoa
 struct EventViewModel {
     
     private let event: Event
+    private let guestViewModel: GuestListViewModel
     
     var title: String {
         event.title ?? "Evento sem título"
@@ -37,8 +38,8 @@ struct EventViewModel {
         return nil
     }
     
-    var guests: [Person]? {
-        event.people
+    var guest: GuestListViewModel {
+        return GuestListViewModel.init(person: event.people!)
     }
     
     var latitude: Double? {
@@ -50,7 +51,8 @@ struct EventViewModel {
     }
 
     
-    init(event: Event) {
+    init(event: Event, guest: GuestListViewModel) {
         self.event = event
+        self.guestViewModel = guest
     }
 }

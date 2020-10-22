@@ -27,48 +27,29 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
     @IBOutlet weak var date: UILabel!
     
     private var isKeyboardShowing = false
-    
-    weak var coordinator: MainCoordinator?
     private var decriptionHeightHelper: NSLayoutConstraint!
     private var gradientLayer: CAGradientLayer!
+    private var alert =  UIAlertController()
+    
+    weak var coordinator: MainCoordinator?
+    
     let disposebag =  DisposeBag()
     var alerts = AlertHelper()
     
-    var eventViewModel: EventViewModel!
     private var eventDetailsViewMode = EventDetailsViewModel()
+    var eventViewModel: EventViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.eventTitle.text = eventViewModel?.title
         
-    
-    
-        let milisecond = eventViewModel.date!
-        let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(milisecond)/1000)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yy"
-        let datefinal  = dateFormatter.string(from: dateVar)
-        date.text = datefinal
+        self.setUpDate()
+        self.setupImage()
+        self.setupKeyboard()
+        self.setupCard()
         
-        let placeholderImage = UIImage(named: "defaultImg")
-        self.eventImage.kf.setImage(with: eventViewModel.image,
-                                    placeholder: placeholderImage,
-                                    options: [.transition(.fade(1))],
-                                    progressBlock: { receivedSize, totalSize in },
-                                    completionHandler: {result in})
-        
-        self.eventDescription.text = eventViewModel.description
         self.decriptionHeightHelper =  self.descriptionHeight
         self.nameFloatLabel.floatLabelDelegate = self
         self.emailFloatLabel.floatLabelDelegate = self
-        self.createGradientLayer()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,7 +85,7 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true, completion: nil)
     }
-    var alert =  UIAlertController()
+    
     @IBAction func checkin(_ sender: Any) {
         guard let nome = nameFloatLabel.text else { return }
         guard let email = emailFloatLabel.text else { return }
@@ -124,7 +105,6 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
                     },
                     onCompleted: {
                     }).disposed(by: disposebag)
-                
             }
             
             alert = alerts.checkinAlert()
@@ -138,12 +118,49 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
         self.map.setRegion(region, animated: true)
     }
     
+    private func setUpDate() {
+        let milisecond = eventViewModel.date!
+        let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(milisecond)/1000)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        let datefinal  = dateFormatter.string(from: dateVar)
+        date.text = datefinal
+    }
+    
+    private func setupKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+
+    }
     
     private func createGradientLayer() {
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.gradientView.bounds
         gradientLayer.colors = [UIColor.darkGray.cgColor, UIColor.clear]
         self.gradientView.layer.addSublayer(gradientLayer)
+        
+        
+    }
+    
+    private func setupImage() {
+        let placeholderImage = UIImage(named: "defaultImg")
+        self.eventImage.kf.setImage(with: eventViewModel.image,
+                                    placeholder: placeholderImage,
+                                    options: [.transition(.fade(1))],
+                                    progressBlock: { receivedSize, totalSize in },
+                                    completionHandler: {result in})
+
+    }
+    
+    private func setupCard()  {
+        self.eventTitle.text = eventViewModel?.title
+        self.eventDescription.text = eventViewModel.description
+        self.createGradientLayer()
+
     }
     
     @objc func keyboardWillShow(_ notification: NSNotification) {
