@@ -64,10 +64,12 @@
 
 
 <p><b>Clone este repositório</b></p>
-$ git clone <https://github.com/luizfetrindade/SicrediChallenge.git>
+$ git clone https://github.com/luizfetrindade/SicrediChallenge.git
+
 
 <p><b>Acesse a pasta do projeto no terminal</b></p>
 $ cd SicrediChallenge/
+
 
 <p><b>Instale os pods:</b></p>
 $ pod install
