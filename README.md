@@ -63,13 +63,13 @@
 ### Build
 
 
-# Clone este repositório
+<p><b>Clone este repositório</b></p>
 $ git clone <https://github.com/luizfetrindade/SicrediChallenge.git>
 
-# Acesse a pasta do projeto no terminal
+<p><b>Acesse a pasta do projeto no terminal</b></p>
 $ cd SicrediChallenge/
 
-# Instale os pods:
+<p><b>Instale os pods:</b></p>
 $ pod install
 
 
