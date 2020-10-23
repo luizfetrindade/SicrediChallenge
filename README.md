@@ -15,7 +15,6 @@
   </p>
  •<a href="#build">Como buildar</a> 
   </p>
- •<a href="#autor">Autor</a>
 </p>
 
 ##
