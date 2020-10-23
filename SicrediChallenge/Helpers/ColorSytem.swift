@@ -17,6 +17,11 @@ class ColorSystem {
         return UIColor.init(named: "defaultBackgroundColor") ?? .gray
     }
     
+    static var navButtonColor: UIColor{
+        return UIColor.init(named: "navButtonColor") ?? .gray
+    }
+    
+    
     func getColor(name: String) -> UIColor{
         return UIColor.init(named: name) ?? .gray
     }

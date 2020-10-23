@@ -57,7 +57,7 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
             return
         }
         
-        if let homeViewController = fromViewController as? ViewController {
+        if let homeViewController = fromViewController as? HomeViewController {
             childDidFinish(homeViewController.coordinator)
         }
     }

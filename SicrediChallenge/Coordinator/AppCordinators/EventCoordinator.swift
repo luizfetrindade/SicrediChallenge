@@ -21,7 +21,7 @@ class EventCoordinator: Coordinator {
     }
 
     func start(eventListViewModel:  EventListViewModel) {
-        let vc =  ViewController.instantiate("Main", id: "home")
+        let vc =  HomeViewController.instantiate("Home", id: "home")
         vc.viewModel = eventListViewModel
         vc.coordinator = parentCoordinator
         navigationController.pushViewController(vc, animated: true)

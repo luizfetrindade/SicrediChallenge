@@ -10,7 +10,7 @@ import MapKit
 import RxSwift
 import RxCocoa
 
-class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDelegate {
+class EventDetailsViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UILabel!
@@ -22,13 +22,14 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var nameFloatLabel: FloatLabel!
     @IBOutlet weak var emailFloatLabel: FloatLabel!
-    @IBOutlet weak var gradientView: UIView!
     @IBOutlet weak var checkinHeigth: NSLayoutConstraint!
     @IBOutlet weak var date: UILabel!
     
+    @IBOutlet weak var dateView: UIView!
+    @IBOutlet weak var checkinBtn: UIButton!
+    
     private var isKeyboardShowing = false
     private var decriptionHeightHelper: NSLayoutConstraint!
-    private var gradientLayer: CAGradientLayer!
     private var alert =  UIAlertController()
     
     weak var coordinator: MainCoordinator?
@@ -50,10 +51,15 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
         self.decriptionHeightHelper =  self.descriptionHeight
         self.nameFloatLabel.floatLabelDelegate = self
         self.emailFloatLabel.floatLabelDelegate = self
+        self.checkinBtn.backgroundColor = .gray
+        self.checkinBtn.setRadiusWithShadow()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.setupMap()
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.tintColor = ColorSystem.navButtonColor
+        
     }
     
     @IBAction func colapseDescription(_ sender: Any) {
@@ -122,7 +128,7 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
         let milisecond = eventViewModel.date!
         let dateVar = Date.init(timeIntervalSinceNow: TimeInterval(milisecond)/1000)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yy"
+        dateFormatter.dateFormat = "dd\nMMM"
         let datefinal  = dateFormatter.string(from: dateVar)
         date.text = datefinal
     }
@@ -135,15 +141,6 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
         
         view.addGestureRecognizer(tap)
 
-    }
-    
-    private func createGradientLayer() {
-        gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.gradientView.bounds
-        gradientLayer.colors = [UIColor.darkGray.cgColor, UIColor.clear]
-        self.gradientView.layer.addSublayer(gradientLayer)
-        
-        
     }
     
     private func setupImage() {
@@ -159,8 +156,7 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
     private func setupCard()  {
         self.eventTitle.text = eventViewModel?.title
         self.eventDescription.text = eventViewModel.description
-        self.createGradientLayer()
-
+        self.dateView.setRadiusWithShadow()
     }
     
     @objc func keyboardWillShow(_ notification: NSNotification) {
@@ -176,7 +172,7 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
     }
     
     @objc func keyboardWillHide(_ notification: NSNotification) {
-        checkinHeigth.constant = 50
+        checkinHeigth.constant = 25
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
             self.contentView.layoutIfNeeded()
@@ -185,5 +181,20 @@ class EventDetailsViewController: UIViewController, Storyboarded, FloatLabelDele
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension EventDetailsViewController: FloatLabelDelegate {
+    func textDidChange(_: UITextField) {
+        if !emailFloatLabel.text!.isEmpty && !nameFloatLabel.text!.isEmpty{
+            UIView.animate(withDuration: 0.3) {
+                self.checkinBtn.backgroundColor = ColorSystem.buttonColor
+            }
+        } else {
+            UIView.animate(withDuration: 0.3) {
+                self.checkinBtn.backgroundColor = .gray
+            }
+    }
+
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 import  RxSwift
 import RxCocoa
 
-class ViewController: UIViewController, Storyboarded {
+class HomeViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
     
@@ -51,5 +51,10 @@ class ViewController: UIViewController, Storyboarded {
         catch let error {
             print("Error: ", error)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "Events"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }

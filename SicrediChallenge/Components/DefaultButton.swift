@@ -20,7 +20,7 @@ class DefaultButton: UIButton {
         setRadiusWithShadow(4, shadow: 1, shadowOp: 0.5)
     }
 
-    func setup() {
+    private func setup() {
         layer.backgroundColor = backgroundColor?.cgColor
         backgroundColor = backGroundColor
         setTitleColor(.white, for: .normal)

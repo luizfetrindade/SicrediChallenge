@@ -74,7 +74,6 @@ class EventListTableViewCell: UITableViewCell {
         dateFormatter.dateFormat = "dd\nMMM"
         let datefinal  = dateFormatter.string(from: dateVar)
         self.eventDate.text = datefinal
-
     }
     
     func setGuestImage(_ urlString: String, guest: Int){

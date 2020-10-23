@@ -5,29 +5,26 @@
 //  Created by Luiz Felipe Trindade on 17/10/20.
 //
 
+import RxSwift
 import XCTest
+
 @testable import SicrediChallenge
 
 class SicrediChallengeTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var viewModel: GuestListViewModel!
+    var scheduler: ConcurrentDispatchQueueScheduler!
+
+    override func setUp() {
+        super.setUp()
+        let person =   Person(picture: "pic.jpge", name: "Luiz", eventID: "1", id: "1")
+        let guests: [Person] = [person]
+        viewModel = GuestListViewModel(person:guests)
+        scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_Pic() throws {
+        let pic = viewModel.getPicAt(0)
+        XCTAssertEqual(pic, "pic.jpge")
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
