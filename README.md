@@ -15,8 +15,6 @@
   </p>
  •<a href="#build">Como buildar</a> 
   </p>
- •<a href="#licenc-a">Licença</a> 
-  </p>
  •<a href="#autor">Autor</a>
 </p>
 
@@ -35,7 +33,26 @@
 
 
 <p float="center">
+ <img src="/AppImages/splash.png"/ width="300">
 <img src="/AppImages/dark1.png"/ width="300">
 <img src="/AppImages/dark2.png"/ width="300">
 <img src="/AppImages/dark3.png"/ width="300">
+</p>
+
+<p float="center">
+<img src="/AppImages/homePrint.png"/ width="300">
+<img src="/AppImages/details4.png"/ width="300">
+ <img src="/AppImages/detailsShare.png"/ width="300">
+</p>
+
+##
+### Tecnologias
+
+<p align="left">
+ •<a href="">CocoaPods</a> 
+ </p>
+ •<a href="">RxSwift</a>  
+  </p>
+ •<a href="">KingFisher</a> 
+  </p>
 </p>
