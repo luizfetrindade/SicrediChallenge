@@ -49,10 +49,10 @@
 ### Tecnologias
 
 <p align="left">
- •<a href="">CocoaPods</a> 
+ •<a href="https://cocoapods.org">CocoaPods</a> 
  </p>
- •<a href="">RxSwift</a>  
+ •<a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>  
   </p>
- •<a href="">KingFisher</a> 
+ •<a href="https://github.com/onevcat/Kingfisher">KingFisher</a> 
   </p>
 </p>
