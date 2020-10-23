@@ -45,8 +45,22 @@
  <img src="/AppImages/detailsShare.png"/ width="300">
 </p>
 
+
 ##
 ### Tecnologias
+
+
+<p align="left">
+ •<a href="https://cocoapods.org">CocoaPods</a> 
+ </p>
+ •<a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>  
+  </p>
+ •<a href="https://github.com/onevcat/Kingfisher">KingFisher</a> 
+  </p>
+</p>
+
+##
+### Build
 
 <p align="left">
  •<a href="https://cocoapods.org">CocoaPods</a> 
