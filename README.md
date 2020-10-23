@@ -22,10 +22,13 @@
 ### Features
 
 - [x] Listagem de eventos
-- [x] Detalhes de evento
+- [x] Quantidade de participantes
+- [x] Descrição do evento
+- [x] Localização do evento
+- [x] Data em que ocorre o evento
 - [x] Realizar Checkin
 - [x] Compartilhar Evento
-- [x] Suporte Darkmode
+- [x] Suporte dark mode
 
 
 ##
