@@ -1,4 +1,4 @@
-<h1 align="center"> App de Eventos </h1>
+<h1 align="center"> App EventGo </h1>
 
 ## Descrição do Projeto:
 
@@ -62,11 +62,14 @@
 ##
 ### Build
 
-<p align="left">
- •<a href="https://cocoapods.org">CocoaPods</a> 
- </p>
- •<a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>  
-  </p>
- •<a href="https://github.com/onevcat/Kingfisher">KingFisher</a> 
-  </p>
-</p>
+
+# Clone este repositório
+$ git clone <https://github.com/luizfetrindade/SicrediChallenge.git>
+
+# Acesse a pasta do projeto no terminal
+$ cd SicrediChallenge/
+
+# Instale os pods:
+$ pod install
+
+
